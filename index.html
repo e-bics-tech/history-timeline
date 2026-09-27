@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>歴史 年表並べ替え</title>
+  <meta name="description" content="6つの歴史の出来事を古い順に並べる、中学生向けの問題集。">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">歴史の問題集</p>
+      <h1>歴史 年表並べ替え</h1>
+      <p>6つの出来事を、古い順に並べてください</p>
+      <p class="hint">項目をタップして選び、画面下の ↑ ↓ で移動します。もう一度タップすると選択を解除します。</p>
+    </header>
+    <section aria-label="並べ替え問題">
+      <div class="list-heading"><span>古い出来事から</span><span>全6件</span></div>
+      <ol id="cards" aria-label="あなたの並べた順序"></ol>
+      <p id="announcement" class="sr-only" role="status"></p>
+      <button id="answer" class="primary" type="button">回答する</button>
+    </section>
+    <section id="result" hidden aria-labelledby="result-title">
+      <p id="score" role="status"></p>
+      <h2 id="result-title" tabindex="-1">正しい順序</h2>
+      <ol id="correct-order"></ol>
+      <button id="next" class="primary" type="button">次の6問</button>
+    </section>
+    <noscript>この問題集を使うには、ブラウザのJavaScriptを有効にしてください。</noscript>
+  </main>
+  <div class="move-bar" role="group" aria-label="選択した出来事を移動">
+    <span id="selection-status" role="status">項目をタップして選択</span>
+    <button id="move-up" class="move" type="button" aria-label="選択した出来事を一つ上へ" disabled>↑</button>
+    <button id="move-down" class="move" type="button" aria-label="選択した出来事を一つ下へ" disabled>↓</button>
+  </div>
+</body>
+</html>
